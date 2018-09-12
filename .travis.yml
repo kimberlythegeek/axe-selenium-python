@@ -17,7 +17,6 @@ cache:
 before_install:
   - pip install -U pip
 install:
-  - pip install -r requirements.txt
   - pip install coverage --ignore-installed
   - npm install
 script:
