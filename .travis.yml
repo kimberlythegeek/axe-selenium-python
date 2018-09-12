@@ -3,9 +3,6 @@ language: python
 node_js: stable
 addons:
   firefox: latest
-env:
-  - MOZ_HEADLESS=1
-  - GECKODRIVER=0.21.0
 
 cache:
   directories:
