@@ -55,7 +55,6 @@ jobs:
       script: tox
 
 deploy:
-  install: skip
   provider: pypi
   user: kimberlythegeek
   password:
