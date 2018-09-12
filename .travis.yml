@@ -1,23 +1,27 @@
 sudo: required
 language: python
-services:
-  - docker
-jobs:
+language: python
+matrix:
   include:
-    - stage:
-      env:
-        - TOXENV=flake8
-    - stage:
+    - python: 2.7
       env: TOXENV=py27
-    - stage:
-      env:
-        - TOXENV=py36
+    - python: 3.6
+      env: TOXENV=py36
+    - env: TOXENV=flake8
+node_js: 4
 cache:
-  pip: true
-before_install: docker build -t axe-selenium-python .
-install: skip
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/virtualenv/python2.7.9/lib/python2.7/site-packages
+    - node_modules
+before_install:
+  - pip install -U pip
+install:
+  - pip install -r requirements.txt
+  - pip install coverage --ignore-installed
+  - npm install
 script:
-    - docker run -e TOXENV=$TOXENV axe-selenium-python tox
+    - tox
 notifications:
   email: fte-ci@mozilla.com
 
