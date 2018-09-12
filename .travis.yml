@@ -15,7 +15,7 @@ cache:
     - $HOME/virtualenv/python2.7.9/lib/python2.7/site-packages
     - node_modules
 before_install:
-  - pip install -U pip
+  - pip install -U pip tox
 install:
   - pip install coverage --ignore-installed
   - npm install
