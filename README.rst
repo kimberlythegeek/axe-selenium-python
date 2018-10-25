@@ -17,9 +17,9 @@ axe-selenium-python integrates aXe and selenium to enable automated web accessib
 .. image:: https://img.shields.io/github/issues-raw/mozilla-services/axe-selenium-python.svg
    :target: https://github.com/mozilla-services/axe-selenium-python/issues
    :alt: Issues
-.. image:: https://api.dependabot.com/badges/status?host=github&repo=mozilla-services/axe-selenium-python
-   :target: https://dependabot.com
-   :alt: Dependabot
+.. image:: https://pyup.io/repos/github/mozilla-services/axe-selenium-python/shield.svg
+   :target: https://pyup.io/repos/github/mozilla-services/axe-selenium-python/
+   :alt: Updates
 
 
 Requirements
@@ -47,8 +47,6 @@ Usage
 
 .. code-block:: python
 
-  import pytest
-  import os
   from selenium import webdriver
   from axe_selenium_python import Axe
 
@@ -104,6 +102,7 @@ version 2.1.0
 version 2.0.0
 **************
 - All functionalities that are not part of axe-core have been moved into a separate package, ``pytest-axe``. This includes:
+
   - ``run_axe`` helper method
   - ``get_rules`` Axe class method
   - ``run`` Axe class method
