@@ -58,6 +58,7 @@ jobs:
       script: tox
     - stage:
       language: python
+      python: 3.6
       env: TOXENV=flake8
       install:
         - pip install tox
