@@ -30,13 +30,13 @@ script: tox
 jobs:
   include:
     - stage:
-      python: 3.6
-      env: TOXENV=py36 MOZ_HEADLESS=1 GECKODRIVER=0.23.0 CHROMEDRIVER=2.40
-    - stage:
-      python: 2.7
-      env: TOXENV=py27 MOZ_HEADLESS=1 GECKODRIVER=0.23.0 CHROMEDRIVER=2.40
+      python: 3.7
+      env: TOXENV=py36 MOZ_HEADLESS=1 GECKODRIVER=0.25.0 CHROMEDRIVER=2.40
     - stage:
       python: 3.6
+      env: TOXENV=py27 MOZ_HEADLESS=1 GECKODRIVER=0.25.0 CHROMEDRIVER=2.40
+    - stage:
+      python: 3.7
       before_install: skip
       install: pip install tox
       env: TOXENV=flake8
